@@ -5,35 +5,56 @@
     android:id="@+id/MainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/firstLayout"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="350dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="1dp"
+        android:background="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/secondLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:text="Layer 1"
+            app:layout_constraintTop_toTopOf="parent" />
     </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/secondLayout"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="350dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:layout_marginBottom="1dp"
+        android:background="@android:color/background_light"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstLayout"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/firstLayout">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Layer 2" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
